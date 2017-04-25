@@ -174,14 +174,14 @@ class game:
         pygame.display.flip()
         image_data = pygame.surfarray.array3d(pygame.display.get_surface())
         # 判断是否死亡
-        if self.snakePosition[0] > 288 or self.snakePosition[0] < 0:
+        if self.snakePosition[0] > 280 or self.snakePosition[0] < 0:
             terminal = True
             self.reward = -1
             reward1=copy.copy(self.reward)
             flag=1
             self.__init__()
             
-        if self.snakePosition[1] > 512 or self.snakePosition[1] < 0:
+        if self.snakePosition[1] > 480 or self.snakePosition[1] < 0:
             terminal = True
             self.reward = -1
             reward1=copy.copy(self.reward)
