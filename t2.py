@@ -106,7 +106,7 @@ class game:
 
         pygame.display.update()
 
-        self.fpsClock.tick(30)
+        self.fpsClock.tick(10)
         return image_data,terminal
 
 
