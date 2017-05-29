@@ -18,3 +18,4 @@ you can do as the follow</br>
 1.git clone https://github.com/makalo/game.git</br>
 2.cd snake_game</br>
 3.python deep_q_network</br>
+4.python tanchi.py作为人工选手跟机器比</br>
