@@ -53,20 +53,14 @@ class createNetwork():
         self.W_fc2 = weight_variable([512, ACTIONS])
         self.b_fc2 = bias_variable([ACTIONS])
 
-        # input layer
         self.s = tf.placeholder("float", [None, 80, 80, 4])
-
-        # hidden layers
+        
         self.h_conv1 = tf.nn.relu(conv2d(self.s, self.W_conv1, 4) + self.b_conv1)
         self.h_pool1 = max_pool_2x2(self.h_conv1)
 
         self.h_conv2 = tf.nn.relu(conv2d(self.h_pool1, self.W_conv2, 2) + self.b_conv2)
-        #h_pool2 = max_pool_2x2(h_conv2)
 
         self.h_conv3 = tf.nn.relu(conv2d(self.h_conv2, self.W_conv3, 1) + self.b_conv3)
-        #h_pool3 = max_pool_2x2(h_conv3)
-
-        #h_pool3_flat = tf.reshape(h_pool3, [-1, 256])
         self.h_conv3_flat = tf.reshape(self.h_conv3, [-1, 1600])
 
         self.h_fc1 = tf.nn.relu(tf.matmul(self.h_conv3_flat, self.W_fc1) + self.b_fc1)

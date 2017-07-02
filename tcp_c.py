@@ -16,6 +16,7 @@ s.connect(('127.0.0.1',9999))
 print (s.recv(1024).decode())
 
 
+
 while(True):
     msg=input("shuru")
     s.send(msg.encode())

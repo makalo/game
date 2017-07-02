@@ -530,5 +530,3 @@ class game:
         self.fpsClock.tick(self.fps)
 
         return image_data,terminal,feed_back
-
-
